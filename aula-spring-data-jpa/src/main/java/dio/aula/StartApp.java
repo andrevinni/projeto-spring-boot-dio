@@ -18,7 +18,7 @@ public class StartApp implements CommandLineRunner {
 		User user = new User();
 		
 		user.setName("ANDRE VINICIUS");
-		user.setUsername("andrevinni");
+		user.setUsername("andrevinni8");
 		user.setPassword("dio123");
 		
 		repository.save(user);
@@ -26,6 +26,10 @@ public class StartApp implements CommandLineRunner {
 		for(User u: repository.findAll()) {
 			System.out.println(u);
 		}
+		
+		System.out.println(repository.findByUsername("andrevinni"));
+		System.out.println(repository.findByNameContaining("ANDRE VINICIUS"));
+		
 	}
 
 }
